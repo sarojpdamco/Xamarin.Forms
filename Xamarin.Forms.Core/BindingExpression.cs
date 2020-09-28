@@ -129,7 +129,7 @@ namespace Xamarin.Forms
 				    && (   (needsGetter && part.LastGetter == null)
 				        || (needsSetter && part.NextPart == null && part.LastSetter == null))) {
 					Log.Warning("Binding", PropertyNotFoundErrorMessage, part.Content, current, target.GetType(), property.PropertyName);
-					BindingDiagnostics.SendBindingFailure(Binding, null, PropertyNotFoundErrorMessage, new[] { part.Content, current, target.GetType(), property.PropertyName });
+					BindingDiagnostics.SendBindingFailure(Binding, current, target, property, null, PropertyNotFoundErrorMessage, new[] { part.Content, current, target.GetType(), property.PropertyName });
 					break;
 				}
 
