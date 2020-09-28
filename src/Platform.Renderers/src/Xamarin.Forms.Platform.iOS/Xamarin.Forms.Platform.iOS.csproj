@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Condition="'$(EnvironmentBuildPropsImported)' != 'True'" Project="..\Environment.Build.props" />
+  <Import Condition="'$(EnvironmentBuildPropsImported)' != 'True'" Project="..\..\..\..\eng\Environment.Build.props" />
   <PropertyGroup>
     <Description>iOS Backend for Xamarin.Forms</Description>
     <AssemblyName>Xamarin.Forms.Platform.iOS</AssemblyName>
@@ -321,11 +321,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin.Forms.Core\Xamarin.Forms.Core.csproj">
+    <ProjectReference Include="..\..\..\Forms\src\Xamarin.Forms.Core\Xamarin.Forms.Core.csproj">
       <Project>{57B8B73D-C3B5-4C42-869E-7B2F17D354AC}</Project>
       <Name>Xamarin.Forms.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\Platform.Handlers\src\Xamarin.Platform.Handlers\Xamarin.Platform.Handlers.csproj">
+    <ProjectReference Include="..\..\..\Platform.Handlers\src\Xamarin.Platform.Handlers\Xamarin.Platform.Handlers.csproj">
       <Project>{29913989-0F70-48D8-8EDE-B1DD217F21D1}</Project>
       <Name>Xamarin.Platform.Handlers</Name>
     </ProjectReference>
